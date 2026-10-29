@@ -1,7 +1,7 @@
 cask "touch-my-bar" do
-  version "0.1.0"
+  version "0.2.0"
   # Replaced on each release by Scripts/release.sh in the app repo.
-  sha256 "179c01b57983bf3835adf60f3ca9d9f5612241db925087c62e7700f55bdd0669"
+  sha256 "3268a69c26a96a493bd4af474bf173ed9757e8ba257ea79dac2c0cc2fedb4db9"
 
   url "https://github.com/jdmry/touch-my-bar/releases/download/v#{version}/TouchMyBar-#{version}.dmg"
   name "Touch My Bar"
@@ -16,10 +16,8 @@ cask "touch-my-bar" do
 
   uninstall quit: "dev.ctoasap.touchmybar"
 
-  zap trash: [
-    "~/Library/Preferences/dev.ctoasap.touchmybar.plist",
-    "~/Library/Caches/dev.ctoasap.touchmybar",
-  ]
+  # Settings are the only thing it leaves behind; it writes no cache.
+  zap trash: "~/Library/Preferences/dev.ctoasap.touchmybar.plist"
 
   caveats <<~EOS
     Touch My Bar is not notarized by Apple, so Gatekeeper will refuse to
@@ -32,6 +30,8 @@ cask "touch-my-bar" do
     own: https://github.com/jdmry/touch-my-bar
 
     Then enable the Control Strip in System Settings > Keyboard >
-    Touch Bar Settings, or use the menu bar icon to toggle the bar.
+    Touch Bar Settings. The bar is yours for as long as the app runs;
+    tap the Control Strip icon to switch back to the normal one, or
+    quit from the menu bar icon to stop altogether.
   EOS
 end
