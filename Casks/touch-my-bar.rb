@@ -8,9 +8,9 @@ cask "touch-my-bar" do
   desc "Replaces the Touch Bar with a dock and system controls"
   homepage "https://github.com/jdmry/touch-my-bar"
 
-  # Touch Bar hardware only: 2016-2022 MacBook Pro.
-  depends_on macos: ">= :ventura"
-  depends_on arch: [:arm64, :x86_64]
+  # Touch Bar hardware only: 2016-2022 MacBook Pro. The build is
+  # universal, so there is no architecture requirement to state.
+  depends_on macos: :ventura
 
   app "Touch My Bar.app"
 
