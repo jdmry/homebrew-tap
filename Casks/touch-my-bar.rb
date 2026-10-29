@@ -1,7 +1,7 @@
 cask "touch-my-bar" do
   version "0.1.0"
   # Replaced on each release by Scripts/release.sh in the app repo.
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "179c01b57983bf3835adf60f3ca9d9f5612241db925087c62e7700f55bdd0669"
 
   url "https://github.com/jdmry/touch-my-bar/releases/download/v#{version}/TouchMyBar-#{version}.dmg"
   name "Touch My Bar"
