@@ -13,6 +13,13 @@ brew install --cask touch-my-bar
 xattr -dr com.apple.quarantine "/Applications/Touch My Bar.app"
 ```
 
+To update later:
+
+```sh
+brew upgrade --cask touch-my-bar
+xattr -dr com.apple.quarantine "/Applications/Touch My Bar.app"
+```
+
 Two of those steps are unusual and worth understanding before you run them.
 
 `brew trust` — Homebrew will not load casks from a third-party tap until
